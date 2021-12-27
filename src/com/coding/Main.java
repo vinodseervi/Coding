@@ -3,7 +3,9 @@ package com.coding;
 import java.util.ArrayList;
 
 import com.coding.helper.Student;
+import com.coding.helper.Teacher;
 import com.coding.service.StudentProcessor;
+import com.coding.service.TeacherProcessor;
 
 public class Main {
 
@@ -24,15 +26,7 @@ public class Main {
 		//create a student with id 2 and name as Pooja
 		
 		Student student2 = new Student(2,"Pooja");
-		
-		
-		
-		
-		//print student with simple method
-		System.out.println("id : " + student1.getId() + "name : " + student1.getName());
-		System.out.println("id : " + student2.getId() + "name : " + student2.getName());
-		
-		
+	
 		//print student with StudentProcessor Class
 		
 	      studentProcessor.printStudent(student1);
@@ -41,6 +35,12 @@ public class Main {
 	      students.add(student1);
 	      students.add(student2);
 	      studentProcessor.printStudent(students);
+	      
+	      TeacherProcessor teacherProcessor = new TeacherProcessor();
+	      Teacher teacher1 = new Teacher();
+	      Teacher teacher2 = new Teacher(1,"vinod", "DSA");
+	      
+	      teacherProcessor.printTeacher(teacher2);
 	      
 
 	}
